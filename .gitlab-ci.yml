@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+
+test_1:
+  stage: build
+  script:
+    - echo $CI_COMMIT_REF_NAME
+    - CI_COMMIT_REF_NAME='prod'
+    - echo $CI_COMMIT_REF_NAME
+  when: manual
+
+test_2:
+  stage: test
+  script:
+    - echo $CI_COMMIT_REF_NAME
+  only:
+    refs:
+      - master
