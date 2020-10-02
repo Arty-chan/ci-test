@@ -6,9 +6,8 @@ test_1:
   stage: build
   script:
     - echo $CI_COMMIT_REF_NAME
-    - CI_COMMIT_REF_NAME='prod'
-    - echo $CI_COMMIT_REF_NAME
-  when: manual
+  only:
+    - external_pull_requests
 
 test_2:
   stage: test
