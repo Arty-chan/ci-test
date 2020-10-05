@@ -9,6 +9,11 @@ test_1:
   only:
     - external_pull_requests
 
+test_3:
+  stage: test
+  script:
+    - echo $CI_COMMIT_REF_NAME
+
 test_2:
   stage: test
   script:
