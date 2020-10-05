@@ -1,4 +1,4 @@
 # ci-test
-Testing external CI
+Test PR trigger
 
 Test commit
